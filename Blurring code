@@ -1,0 +1,15 @@
+import cv2
+
+#load the image
+image = cv2.imread('img.jpg')
+
+#apply gaussian blurr
+gaussian_blur = cv2.GaussianBlur(image, (9,9), 0)
+
+#display the images
+cv2.imshow('Original ', image)
+cv2.imshow('Gaussian Blur ', gaussian_blur)
+
+# Wait for key press and close windows
+cv2.waitKey(0)
+cv2.destroyAllWindows()
